@@ -1,9 +1,0 @@
-package com.example.mytodoapplication.entities;
-
-import org.springframework.data.jpa.domain.AbstractAuditable;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.NoRepositoryBean;
-
-@NoRepositoryBean
-public interface MyTARepository<T extends AbstractAuditable, ID> extends JpaRepository<T, ID> {
-}
