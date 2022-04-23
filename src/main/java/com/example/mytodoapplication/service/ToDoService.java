@@ -2,10 +2,12 @@ package com.example.mytodoapplication.service;
 
 import com.example.mytodoapplication.entities.ToDo;
 import com.example.mytodoapplication.repository.ToDoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ToDoService {
 
     private ToDoRepository toDoRepository;
