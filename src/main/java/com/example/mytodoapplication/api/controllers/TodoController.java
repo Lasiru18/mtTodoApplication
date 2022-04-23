@@ -45,8 +45,7 @@ public class TodoController {
     @PutMapping("/{todoId}")
     public Optional<ToDo> updateTodo(@PathVariable("todoId") Long todoId, @RequestBody ToDo updatedToDo) {
         //call to service
-        return toDoService.updateTodo(todoId)
-                .map(oldTodo -> toDoRepository.save(updatedToDo));
+        return toDoService.updateTodo(todoId, updatedToDo);
     }
 
     @DeleteMapping("/{todoId}")

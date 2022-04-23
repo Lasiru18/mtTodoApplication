@@ -34,9 +34,8 @@ public class ToDoService {
     }
 
     //Call to ToDoRepository
-    public Optional<ToDo> updateTodo(Long todoId){
-        return toDoRepository.findById(todoId);
-
+    public Optional<ToDo> updateTodo(Long todoId, ToDo updatedToDo){
+        return this.toDoRepository.findById(todoId).map(oldTodo -> this.toDoRepository.save(updatedToDo));
     }
 
     //Call to ToDoRepository

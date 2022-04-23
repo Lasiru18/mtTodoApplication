@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "tbl_todo")
+@Table
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +24,9 @@ public class ToDo {
 
     @Column(name = "completed")
     private Boolean completed;
+
+    @Column(name = "Location")
+    private String location;
 
 }
 
